@@ -1,0 +1,82 @@
+GRAPHQL QUERY FORMET
+
+=> Mutation Format <=
+============================================================================================
+
+#INSERT_AUTHOR_QUERY
+
+mutation{
+addAuthor(name:"author 1",age:25){
+  name
+  age
+ }
+}
+
+#INSERT_BOOK_QUERY
+
+mutation{
+addBook(name:"Book 1",genre:"horror",authorId:"6197a44566c501103c071653"){
+  name
+  genre
+}
+}
+
+========
+#PRODUCT
+========
+#INSERT-PRODUCT
+
+mutation{
+  addProduct(name:"Product 1",description:"This is Product",price:"100",countInStock:"3",imageUrl:"www.google.com"){
+    name
+    description
+    price
+    countInStock
+    imageUrl
+  }
+}
+
+#UPDATE-PRODUCT
+
+mutation{
+  updateProduct(id:"6197b9cad0ef7d21c4ceb5bd",name:"Product update",description:"updated",price:"updated",countInStock:"update",imageUrl:"Update"){
+    name
+    description
+    price
+    countInStock
+    imageUrl
+  }
+}
+
+#REMOVE-PRODUCT
+
+mutation{
+  RemoveProduct(id:"6197b9cad0ef7d21c4ceb5bd"){
+    name
+  }
+}
+
+
+=> Root Query <=
+===========================================================================================
+#GET_BOOK_ALL_DATA
+
+{
+  books{
+    name
+  }
+}
+
+#GET_BOOK_BY_ID
+
+{
+  book(id:"6197a7ee66c501103c071658"){
+    id
+    name
+  }
+}
+
+
+
+
+
